@@ -16,7 +16,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y cmake ninja-build build-essential
-          pip install geode-cli
+          pip install geodecli
 
       - name: Build Mod with CLI
         run: |
