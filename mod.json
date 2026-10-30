@@ -1,13 +1,18 @@
 {
-	"geode": "4.0.0",
-	"gd": "2.2081",
-	"version": "1.0.0",
-	"id": "reumeow.frame_analyzer",
-	"name": "Frame Window Analyzer",
-	"developer": "reumeow",
-	"description": "Analyzes .gdr/.2gdr replays and visualizes frame windows with custom colors and sounds.",
-	"dependencies": [],
-	"settings": {
+  "geode": "5.11.2",
+  "gd": {
+    "win": "2.2081",
+    "android": "2.2081",
+    "mac": "2.2081",
+    "ios": "2.2081"
+  },
+  "id": "reumeow.frame_analyzer",
+  "name": "Frame Window Analyzer",
+  "version": "v1.0.0",
+  "developer": "reumeow",
+  "description": "Analyzes .gdr/.2gdr replays and visualizes frame windows with custom colors and sounds.",
+  "dependencies": {},
+  "settings": {
 		"color-1f": {
 			"name": "1 Frame Color",
 			"description": "Color for absolute pixel-perfect frames (1f)",
@@ -33,4 +38,5 @@
 			"default": "#00FF00"
 		}
 	}
+
 }
