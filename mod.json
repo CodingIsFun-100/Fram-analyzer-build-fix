@@ -1,5 +1,6 @@
 {
 	"geode": "4.0.0",
+	"gd": "2.2081"
 	"version": "1.0.0",
 	"id": "reumeow.frame_analyzer",
 	"name": "Frame Window Analyzer",
