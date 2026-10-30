@@ -1,11 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
-
-# Geode's bundled fmt and toolchain setup are compatible with C++20.
-# Using C++23 triggers a Clang incompatibility in the Windows CI build.
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
-
 if ("${CMAKE_SYSTEM_NAME}" STREQUAL "iOS" OR IOS)
     set(CMAKE_OSX_ARCHITECTURES "arm64")
 else()
@@ -13,7 +8,7 @@ else()
 endif()
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
-project(Template VERSION 1.0.0 LANGUAGES CXX)
+project(Template VERSION 1.0.0)
 
 # Add all source files inside src (recursively)
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
