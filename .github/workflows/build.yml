@@ -1,8 +1,6 @@
 name: Build and Optional Release
 
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
     inputs:
       create_release:
@@ -12,8 +10,8 @@ on:
         default: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build-and-release:
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
     steps:
@@ -28,12 +26,11 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: my-artifact
+          name: build-artifact
           path: dist/
 
-      # Releases automatically on push to main OR when manually triggered with create_release set to true
       - name: Create Release
-        if: ${{ github.event_name == 'push' || inputs.create_release == true }}
+        if: ${{ inputs.create_release == true }}
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.${{ github.run_number }}
